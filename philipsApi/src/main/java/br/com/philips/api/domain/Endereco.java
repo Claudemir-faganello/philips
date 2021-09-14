@@ -26,12 +26,13 @@ public class Endereco {
 	private String street;
 	private String city;
 	private String number;
-	private String zipCode;
+	private String zipCode; 
 	private String state;
 	private String country;
+	private String type;
 
 	@ManyToOne
-	@JoinColumn(name = "client_id")
+	@JoinColumn(name = "client_id") 
 	@JsonIgnore
 	private Client client;
 }

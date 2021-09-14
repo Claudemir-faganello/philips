@@ -13,7 +13,7 @@ function Home() {
             partir de dados fornecidos por um back end construído com Spring
             Boot.
           </p>
-          <Link className="btn btn-primary bnt-lg py-2" to="/lista">
+          <Link className="btn btn-primary bnt-lg py-2" to="/clients">
             Acessar lista de clientes
           </Link>
         </div>

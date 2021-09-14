@@ -12,11 +12,15 @@ import br.com.philips.api.domain.Client;
 import br.com.philips.api.exceptions.EntityAlreadyExistException;
 import br.com.philips.api.exceptions.EtityNotFoundException;
 import br.com.philips.api.repository.ClientRepository;
+import br.com.philips.api.repository.EnderecoRepository;
 
 @Service
 public class ClientService {
 	@Autowired
 	private ClientRepository clientRepository;
+
+	@Autowired
+	private EnderecoRepository enderecoRepository;
 
 	public Page<Client> listAll(Integer page, Integer size) {
 		PageRequest pageRequest = PageRequest.of(page, size);
@@ -28,7 +32,12 @@ public class ClientService {
 		if (clientPrevious.isPresent()) {
 			throw new EntityAlreadyExistException("Cliente de cpf: " + client.getCpf() + " já cadastrado!");
 		}
-		return this.clientRepository.save(client);
+		Client clientSaved = this.clientRepository.save(client);
+		client.getEndereco().forEach(x -> {
+			x.setClient(clientSaved);
+		});
+		this.enderecoRepository.saveAllAndFlush(client.getEndereco());
+		return clientSaved;
 	}
 
 	public Client findById(Long id) {

@@ -9,10 +9,13 @@ const Routes = () => {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/lista">
+        <Route path="/clients" exact>
           <DashBoard />
         </Route>
-        <Route path="/form">
+        <Route path="/clients/form" exact>
+          <FormClient />
+        </Route>
+        <Route path="/clients/form/:id" exact>
           <FormClient />
         </Route>
       </Switch>

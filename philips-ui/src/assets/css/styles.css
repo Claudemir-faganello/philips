@@ -34,3 +34,30 @@ a{
 .text-primary {
     color: var(--color-primary) !important;
 }
+
+.fluid{
+    width: 100% !important;
+}
+.marginTopSmall{
+    margin-top: 23px;
+}
+.text-right{
+    text-align: right;
+}
+
+.adress-detail{
+    font-size: 10px;
+    display: block;
+    font-weight: bold;
+}
+.adress-title{
+    color: #565656;
+}
+
+.adress-container{
+    padding: 10px;
+}
+.link{
+    color: rgb(15, 118, 197);
+    margin-right: 10px;
+}

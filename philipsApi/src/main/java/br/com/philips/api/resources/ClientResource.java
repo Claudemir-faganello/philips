@@ -36,17 +36,17 @@ public class ClientResource {
 
 	@GetMapping
 	public ResponseEntity<?> list(@RequestParam(defaultValue = "0") Integer page,
-			@RequestParam(defaultValue = "10000") Integer size) {
+			@RequestParam(defaultValue = "5") Integer size) {
 		return ResponseEntity.ok(this.clientService.listAll(page, size));
 	}
 
 	@GetMapping("/{id}")
-	public ResponseEntity<?> findById(@RequestParam(required = true) Long id) {
+	public ResponseEntity<?> findById(@PathVariable(required = true) Long id) {
 		return ResponseEntity.ok(this.clientService.findById(id));
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<?> deleteById(@RequestParam(required = true) Long id) {
+	public ResponseEntity<?> deleteById(@PathVariable(required = true) Long id) {
 		this.clientService.delete(id);
 		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 	}
