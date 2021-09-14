@@ -72,10 +72,9 @@ function DataTable() {
                     <td>{item.fullName}</td>
                     <td>{item.birth}</td>
                     <td>
-                      <a className="fa fa-edit">Editar | </a>
                       <a
                         onClick={() => removeClient(item.id)}
-                        className="fa fa-edit"
+                        className="text-danger"
                       >
                         Excluir
                       </a>
