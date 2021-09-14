@@ -1,88 +1,61 @@
-
 function DataTable() {
-    return (
+  return (
+    <div className="row">
+      <div className="col-sm-12 py-3">
+        <h2 className="text-secondary text-center py-4">Lista de clientes</h2>
+          
       <div className="table-responsive">
       <table className="table table-striped table-sm">
           <thead>
               <tr>
-                  <th>Data</th>
-                  <th>Vendedor</th>
-                  <th>Clientes visitados</th>
-                  <th>Negócios fechados</th>
-                  <th>Valor</th>
+                  <th>Id</th>
+                  <th>Nome</th>
+                  <th>CPF</th>
+                  <th>Nascimento</th>
+                  <th>Ações</th>
               </tr>
           </thead>
           <tbody>
               <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
+                  <td>1</td>
+                  <td>Claudemir</td>
+                  <td>03101078067</td>
+                  <td>26/08/1993</td>
+                  <td>
+                      <a className="fa fa-edit">Editar | </a>
+                      <a className="fa fa-edit">Excluir</a>
+                  </td>
               </tr>
               <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
+                  <td>1</td>
+                  <td>Claudemir</td>
+                  <td>03101078067</td>
+                  <td>26/08/1993</td>
+                  <td>
+                      <a className="fa fa-edit">Editar | </a>
+                      <a className="fa fa-edit">Excluir</a>
+                  </td>
               </tr>
               <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
+                  <td>1</td>
+                  <td>Claudemir</td>
+                  <td>03101078067</td>
+                  <td>26/08/1993</td>
+                  <td>
+                      <a className="fa fa-edit">Editar | </a>
+                      <a className="fa fa-edit">Excluir</a>
+                  </td>
               </tr>
-              <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
-              </tr>
-              <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
-              </tr>
-              <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
-              </tr>
-              <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
-              </tr>
-
-              <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
-              </tr>
-              <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
-              </tr>
+            
               
           </tbody>
       </table>
   </div>
-    );
-  }
-  
-  export default DataTable;
-  
+    
+      </div>
+
+    </div>
+  );
+}
+
+export default DataTable;
